@@ -1,7 +1,6 @@
 from django.contrib import admin
 
-from .models import QuaterBlock, Goal, Sentences
+from .models import QuarterBlock, Goal
 
-admin.site.register(QuaterBlock)
+admin.site.register(QuarterBlock)
 admin.site.register(Goal)
-admin.site.register(Sentences)
