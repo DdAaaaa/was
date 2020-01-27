@@ -2,11 +2,12 @@ from django.db import models
 from django.contrib.auth.models import User
 
 
-class QuaterBlock(models.Model):
+class QuarterBlock(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     level = models.IntegerField(default=0)
-    created_date = models.DateTimeField()
-    modified_date = models.DateTimeField()
+    action_time = models.DateTimeField()
+    created_date = models.DateTimeField(auto_now_add=True)
+    modified_date = models.DateTimeField(auto_now=True)
 
     def __str__(self):
         return self.level
